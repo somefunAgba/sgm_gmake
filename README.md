@@ -24,7 +24,7 @@ $$\mathbf d[t+1] = \mathbf w[t+1] - \mathbf w[t].$$
 Each individual ($i$-th) coordinate of the update-step vector is
 
 $$
-\mathbf d[t+1,i] = - \frac{\delta[t]}{\mathbb{E}\left[|\mathbf v[t,i] |^p\right]^{1/p}}\,\mathbf v[t,i],
+\mathbf d[t+1,i] = - \frac{\delta[t]}{\mathbb{E}\left[|\mathbf v[t,i] |^p\right]^{1/p}}\mathbf v[t,i],
 $$
 
 where $0 \le \delta[t] \le \mu$, with 
@@ -42,7 +42,7 @@ $$
 which implies
 
 $$
-\mathbb{E}\left[\| \mathbf d[t] \|^p\right] \le n\,\mu^p
+\mathbb{E}\left[\| \mathbf d[t] \|^p\right] \le n\mu^p
 $$
 
 
@@ -108,7 +108,7 @@ $$
 \mathbf v[t, i] \leftarrow \frac{\mathbf v[t, i] }{m_p^{1/p} + \epsilon}
 $$
 
-2.4. **[optional] Matrix-view: inverse-square-root estimate of the covariance matrix $\mathbf v[t]\,\mathbf v[t]^\intercal$**
+2.4. **[optional] Matrix-view: inverse-square-root estimate of the covariance matrix $\mathbf v[t]\mathbf v[t]^\intercal$**
 $$
 \mathbf v[t] \leftarrow \text{ISRM}\left(\mathbf v[t], \epsilon\right)
 $$
@@ -118,7 +118,7 @@ $$
 **Decoupled Weight decay step**
 
 $$
-\mathbf d[t+1] = \delta[t]\,\bigl(\mathbf v[t] + \lambda \, \mathbf w[t]\bigr)
+\mathbf d[t+1] = \delta[t]\bigl(\mathbf v[t] + \lambda  \mathbf w[t]\bigr)
 $$
 
 ---
