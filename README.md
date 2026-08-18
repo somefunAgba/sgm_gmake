@@ -31,7 +31,7 @@ where $0 \le \delta[t] \le \mu$, with
 
 - $\mu> 0$ being a user-defined maximum allowable update step-size.
 
-- $\mathbf v[t]$ being a possibly filtered input stochastic gradient.
+- $\mathbf v[t]$ being a possibly filtered stochastic gradient input.
 
 The parameter update then satisfies the uniform $p$-th moment trust-region step-size 
 
