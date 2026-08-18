@@ -223,7 +223,7 @@ Use **GMAKE** when:
 
 Somefun, O. A. 2026. **A Trust-region Framework for Moment Estimation** *Preprint*. 
 
-Personal Web Link: https://somefunagba.github.io/assets/pdf/momest\_trf.pdf
+Personal Web Link: https://somefunagba.github.io/assets/pdf/momest_trf.pdf
 
 ArXiv Link: https://arxiv.org/pdf/2608.04026
 
