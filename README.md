@@ -18,22 +18,29 @@ Fully interpretable trust-region constrained step-size mechanism for several pra
 ## Core Concept
 
 For a parameter vector $\mathbf w[t]$ of size $n$, denote the parameter update-step vector at iteration $t$ as
+
 $$\mathbf d[t+1] = \mathbf w[t+1] - \mathbf w[t].$$
 
 Each individual ($i$-th) coordinate of the update-step vector is
+
 $$
 \mathbf d[t+1,i] = - \frac{\delta[t]}{\mathbb{E}\left[|\mathbf v[t,i] |^p\right]^{1/p}}\,\mathbf v[t,i],
 $$
+
 where $0 \le \delta[t] \le \mu$, with 
+
 - $\mu> 0$ being a user-defined maximum allowable update step-size.
+
 - $\mathbf v[t]$ being a possibly filtered input stochastic gradient.
 
 The parameter update then satisfies the uniform $p$-th moment trust-region step-size 
+
 $$
 \mathbb{E}\left[| \mathbf d[t,i] |^p\right] = \delta[t]^p \le \mu^p
 $$
 
 which implies
+
 $$
 \mathbb{E}\left[\| \mathbf d[t] \|^p\right] \le n\,\mu^p
 $$
@@ -163,7 +170,7 @@ This is a Python-based implementation:
 
 ## Comparison vs Adam
 
-Using the same hyperparameters, we can compare `Adam` with weight-decay and cosine annealing, versus `SGM_GMAKE` ($p=2$).
+Using the same hyperparameters (including weight-decay and cosine annealing), we can compare `Adam`, versus `SGM_GMAKE` ($p=2$).
 
 ---
 
