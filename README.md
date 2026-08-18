@@ -54,8 +54,7 @@ For Individual parameters in a layer:
 
 **Input and major training hyperparameters:**
 
-* Parameter vector: $\mathbf w[t]$
-* Gradient: $\mathbf g[t]$
+* Parameter vector: $\mathbf w[t]$ and its stochastic gradient: $\mathbf g[t]$
 * Moment order $p\ge 1$
 * Max step-size $\mu > 0$
 * First-order filter pole $0\le\beta<1$, and filter zero $|\gamma| < \beta$
