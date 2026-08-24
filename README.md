@@ -148,9 +148,10 @@ This is a Python-based implementation:
 
 ```python
     model = net_model()
-    num_iters = int(1e9)
-    warmup_steps = 100
-    m = warmup_steps/num_iterations
+    num_iters = int(1e9) # training iterations
+    # warmup_steps
+    m = 0.1 # 10% of training iterations from initialization
+    e = 0.1 # 10% of training iterations after warmup
 
     # Gmake p=2
     optimizer1 = SGM_GMAKE(
@@ -164,7 +165,7 @@ This is a Python-based implementation:
     optimizer2 = SGM_GMAKE.Adam(params,
         tr_cfg=(5e-4, 0.9, 'phb'), 
         stat_cfg=(0.999, 1e-10, 0),
-        win_cfg=(2, m, 0.1, 0, num_iters)
+        win_cfg=(2, m, e, 0, num_iters) # config: cosine annealing decay to zero.
     )
 ```
 
