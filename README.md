@@ -158,7 +158,7 @@ This is a Python-based implementation:
         model.parameters(), p=2,
         tr_cfg=(5e-4, 0.9, 'vrg', False),  # trust-region config
         stat_cfg=(0.999, 1e-10, 0, False), # stat. estimator config
-        win_cfg=(2, m, 0.1, 0, num_iters)  # lr schedule config
+        win_cfg=(2, m, e, 0, num_iters)  # lr schedule config
     )
 
     # Preset API: Adam
