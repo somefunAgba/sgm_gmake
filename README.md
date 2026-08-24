@@ -72,15 +72,15 @@ For Individual parameters in a layer:
 
 ---
 
-**Gradient filtering via a linear time-invariant operator $\mathcal{H}$ with spectral norm less than one (Momentum)**
+**Momentum as Gradient filtering via a linear time-invariant operator $\mathcal{H}$ with spectral norm less than one.**
 
 $$
-\mathbf v[t, i] = \mathcal{H}\{\mathbf g[t, i], \beta, \gamma \}
+\mathbf v[t, i] = \mathcal{H}\Bigl[\mathbf g[t, i], \beta, \gamma \Bigr]
 $$
 
 ---
 
-2.1 **Learning-rate schedule $\mathcal{T}(t)$**
+2.1 **Unified Learning-rate schedule $\mathcal{T}(t)$**
 
 $$
 \delta[t] = \mu \cdot \mathcal{T}(t)
@@ -108,6 +108,7 @@ $$
 $$
 
 2.4. **[optional] Matrix-view: inverse-square-root estimate of the covariance matrix $\mathbf v[t]\mathbf v[t]^\intercal$**
+
 $$
 \mathbf v[t] \leftarrow \text{ISRM}\left(\mathbf v[t], \epsilon\right)
 $$
